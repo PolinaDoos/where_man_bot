@@ -34,7 +34,7 @@ def finish(update, context):
 
 def main():
     # Создаем бота и передаем ему ключ для авторизации на серверах Telegram
-    mybot = Updater(1983390726:AAHskDyhDZUPN9xrtQwU_kmwJrv3UUu3sSQ, 
+    mybot = Updater('TOKEN', 
                     use_context=True, request_kwargs=PROXY)
 
     dp = mybot.dispatcher
