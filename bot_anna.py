@@ -1,13 +1,8 @@
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 from telegram import ReplyKeyboardMarkup, ReplyKeyboardRemove
-import settings_anna
 import logging
 
 logging.basicConfig(filename='bot_anna.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-
-# обход блокировой ТГ через прокси
-PROXY = {'proxy_url': settings_anna.PROXY_URL,
-        'urllib3_proxy_kwargs': {'username': settings_anna.PROXY_USERNAME, 'password': settings_anna.PROXY_PASSWORD}}
 
 def greet_user(update, context):
     print('Ну что ж, начнем')
@@ -39,7 +34,7 @@ def finish(update, context):
 
 def main():
     # Создаем бота и передаем ему ключ для авторизации на серверах Telegram
-    mybot = Updater(settings_anna.API_KEY, 
+    mybot = Updater(1983390726:AAHskDyhDZUPN9xrtQwU_kmwJrv3UUu3sSQ, 
                     use_context=True, request_kwargs=PROXY)
 
     dp = mybot.dispatcher
