@@ -18,7 +18,7 @@ def greet_user(update, context):
 
 def talk_to_me(update, context):
     user_text = update.message.text
-    markup = ReplyKeyboardMarkup([['/Yes'], ['/No']], resize_keyboard=True, one_time_keyboard=True)
+    markup = ReplyKeyboardMarkup([['/Yes', '/No']], resize_keyboard=True, one_time_keyboard=True)
     update.message.reply_text(f'{user_text} сейчас с тобой в одной комнате?', reply_markup = markup)
     
 
